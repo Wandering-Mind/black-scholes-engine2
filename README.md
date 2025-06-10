@@ -20,14 +20,16 @@ Tools: NumPy, SciPy, Matplotlib, pandas, Jupyter Notebook, pytest
 | **Risk-Free Rate**            | Used in Black-Scholes model (e.g., 1Y Treasury) | 5.00%            |
 | **Dividend Yield**            | If stock pays dividends (optional for European) | 0.70%            |
 
-## Where to Get the Data
-| **Source**                                   | **Data Type**                     | **How to Access**         |
-| -------------------------------------------- | --------------------------------- | ------------------------- |
-| [Yahoo Finance](https://finance.yahoo.com)   | Historical stock prices + options | `yfinance` Python package |
-| [FRED](https://fred.stlouisfed.org)          | Risk-free rates (e.g., 1Y T-bill) | `fredapi`                 |
-| [Quandl](https://www.quandl.com)             | Premium/Free economic data        | `quandl` API              |
-| [Polygon.io](https://polygon.io)             | Real-time market data (paid)      | REST API                  |
-| [Alpha Vantage](https://www.alphavantage.co) | Historical + options data         | Free API key              |
+## Where to get the Data
+| Data Source       | Substitutes                                                    |
+| ----------------- | -------------------------------------------------------------- |
+| Historical prices | ✅ Alpha Vantage (`alpha_vantage`)                              |
+| Risk-free rate    | ✅ FRED API (`fredapi`)                                         |
+| Real-time options | ❌ (AV doesn't provide options data – scrape or use Polygon.io) |
+
+## Polygon.io: Scraping for Option Chain Data
+  # Assumption - you are using Alpha_Vantage
+
 
 ## How to Clean the Data 
 A. Stock Price Data (for Volatility)
