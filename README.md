@@ -1,11 +1,8 @@
-# black-scholes-engine2
+# Black Scholes Engine v2
+Python-based options pricing models, analytics, 
+stochastic options models, European options pricing, 
 
-# black-scholes-engine
-Python-based options pricing models, analytics, stochastic options models, European options pricing, 
-
-## Using alpha_vantage (engine version2)
-
-## Black Scholes Engine 
+## Using alpha_vantage (engine version2 (v2)
 Option Pricing Engine with Greeks (Analytical + Monte Carlo)
 
 ## Stack
@@ -15,7 +12,7 @@ Tools: NumPy, SciPy, Matplotlib, pandas, Jupyter Notebook, pytest
 ## Types of Data Required
 | **Type of Data**              | **Purpose**                                     | **Example**      |
 | ----------------------------- | ----------------------------------------------- | ---------------- |
-| **Stock Prices (historical)** | To estimate **realized/historical volatility**  | AAPL, TSLA, etc. |
+| **Stock Prices (historical)** | To estimate **realized/historical volatility**  | LMT, GD, NOC |
 | **Option Chain (live data)**  | For **validation** of your pricing model        | Call/put prices  |
 | **Risk-Free Rate**            | Used in Black-Scholes model (e.g., 1Y Treasury) | 5.00%            |
 | **Dividend Yield**            | If stock pays dividends (optional for European) | 0.70%            |
@@ -35,7 +32,7 @@ Tools: NumPy, SciPy, Matplotlib, pandas, Jupyter Notebook, pytest
 A. Stock Price Data (for Volatility)
 import yfinance as yf
 
-ticker = yf.Ticker("AAPL")
+ticker = yf.Ticker("LMT")
 hist = ticker.history(period="1y")  # Get 1 year of daily data
 
 # Clean and inspect
